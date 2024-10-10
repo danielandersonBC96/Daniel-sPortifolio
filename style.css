@@ -1,0 +1,583 @@
+/* Estilos globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --bg-color: black;
+  --second-bg-color: white;
+  --text-color: white;
+  --main-color: blue;
+  --highlight-color:  rgba(0, 0, 255, 0.801);
+  --gradient-color1:  rgba(0, 0, 255, 0.589);
+  --gradient-color2: #7e65f0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--bg-color);
+  color:  white;
+  line-height: 1.6;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 2rem 10%;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+#menu-icon {
+  font-size: 3.5rem;
+  color: var(--main-color);
+  display: none;
+  cursor: pointer;
+}
+
+.logo {
+  font-size: 3rem;
+  color: var(--text-color);
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.gradient-text {
+  background: linear-gradient(270deg, var(--main-color) 10%, black 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+nav.navbar {
+  display: flex;
+  gap: 2rem;
+}
+
+nav.navbar a {
+  color: var(--text-color);
+  font-size: 1.8rem;
+  transition: color 0.3s;
+}
+
+nav.navbar a:hover {
+  color: var(--highlight-color);
+}
+
+.gradient-btn {
+  padding: 1rem 2rem;
+  background: linear-gradient(45deg, var(--gradient-color1), var(--gradient-color2));
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.gradient-btn:hover {
+  background: linear-gradient(45deg, var(--gradient-color2), var(--gradient-color1));
+  padding: 1.2rem;
+}
+
+span {
+  background: linear-gradient(45deg, var(--gradient-color1), var(--gradient-color2));
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+  padding-top: 12rem;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.home-content h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.home-content h3 {
+  margin: 1rem 0;
+  font-size: 3.5rem;
+}
+
+.home-content p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.home-img img {
+  width: 30vw;
+  border-radius: 50%;
+  box-shadow: 0 0 25px var(--main-color);
+  transition: box-shadow 0.4s ease-in-out, transform 0.3s;
+}
+
+.home-img img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 50px var(--main-color);
+}
+
+.social-icons {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 15px;
+  color: var(--main-color);
+  margin: 3rem 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 3rem;
+  background-color: var(--main-color);
+  box-shadow: 0 0 25px var(--main-color);
+  border-radius: 3rem;
+  font-size: 1.8rem;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color);
+}
+
+.btn-group a:nth-of-type(2) {
+  background-color: white;
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+  box-shadow: 0 0 25px transparent;
+}
+
+.about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  background: var(--second-bg-color);
+  background-color: #1f1f1f;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.about-img img {
+  width: 32vw;
+  border-radius: 50%; /* Faz a imagem ficar redonda */
+  box-shadow: 0 0 25px var(--main-color);
+  transition: 0.4s ease-in-out;
+}
+
+.about-img img:hover{
+  box-shadow:  0 0 25px var(--main-color),
+               0 0 50px var(--main-color),
+               0 0 100px var(--main-color);
+}
+
+.about-content h2{
+  font-size: 7rem;
+  text-align: left;
+  margin: 3rem 0;
+}
+.about-content p {
+  font-size: 1.8rem;
+}
+
+.about-content .btn{
+   
+margin: 3rem 0;
+
+}
+
+.heading{
+  text-align: center;
+  font-size: 7rem;
+  margin: 5rem 0;
+}
+ .services-heading{
+  padding: 60px 20px;
+  background-color: black;
+}
+
+.services h2 {
+  font-size: 7rem;
+  text-align: left;
+  margin: 3rem 0;
+}
+
+.services .heading {
+  color: white;
+  font-size: 7rem;
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: 1fr; /* Uma coluna */
+  gap: 30px;
+}
+
+.services-box {
+  background-color: blue;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 100%; /* Para ocupar 100% da largura */
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.services-box:hover {
+  transform: translateY(-10px);
+}
+
+.services-info i {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.services-info h4 {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.services-info p {
+  font-size: 1rem;
+  color: white;
+  line-height: 1.6;
+}
+
+
+
+.projects {
+  background-color: #1f1f1f; ; /* Fundo preto */
+  padding: 2rem; /* Adiciona um padding para melhor espaçamento */
+}
+
+.heading {
+  color: white; /* Cor do título em azul */
+  text-align: center;
+  margin-bottom: 2rem; /* Espaçamento abaixo do título */
+}
+
+.projects-box {
+  display: grid; /* Usando grid para o layout */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajuste o tamanho mínimo para 250px */
+  gap: 2rem; /* Espaçamento entre as caixas */
+}
+
+.projects-card {
+  display: flex; /* Flex para centralizar o conteúdo */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #1a1a1a; /* Fundo do cartão em cinza escuro */
+  border: 2px solid blue; /* Borda azul */
+  border-radius: 1rem; /* Bordas arredondadas */
+  gap: 1rem; /* Espaçamento interno */
+  padding: 1rem; /* Padding interno do cartão */
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.projects-card:hover {
+  box-shadow: 0 0 25px blue, 0 0 50px blue; /* Sombra ao passar o mouse */
+  transform: scale(1.02);
+}
+
+.projects-card img {
+  width: 100%; /* Ajusta a largura para preencher o cartão */
+  height: 150px; /* Altura fixa para todas as imagens */
+  border-radius: 0.5rem; /* Bordas arredondadas para a imagem */
+  object-fit: cover; /* Mantém a proporção da imagem */
+}
+
+.btn {
+  background-color: blue; /* Botão azul */
+  color: white; /* Texto em branco */
+  padding: 0.5rem 1rem; /* Padding do botão */
+  border-radius: 0.5rem; /* Bordas arredondadas do botão */
+  cursor: pointer; /* Indica que é clicável */
+  transition: 0.3s ease; /* Transição suave */
+}
+
+.btn:hover {
+  background-color: darkblue; /* Cor do botão ao passar o mouse */
+}
+
+.contact {
+  padding: 40px 20px;
+  background-color: black; /* Dark background for the contact section */
+  color: #ffffff; /* White text color */
+  text-align: center;
+}
+
+.contact h2 {
+  margin-bottom: 20px;
+  font-size: 7rem;
+  text-align: left;
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.contact h2 span {
+  color:  white; /* Blue color for the span */
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px; /* Maximum width for the form */
+  margin: 0 auto; /* Center the form */
+  padding: 20px;
+  background-color: blue; /* Blue background for the form */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  margin: 10px 0; /* Margin between inputs */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1em; /* Consistent font size */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none; /* Remove outline */
+  box-shadow:  blue; /* Blue shadow on focus */
+}
+
+.contact-form button {
+  padding: 15px;
+  background-color: blue; /* Black button color */
+  color: white;
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  font-size: 1em; /* Consistent font size */
+  transition: background-color 0.3s ease; /* Transition effect */
+}
+
+.contact-form button:hover {
+  background-color: blue; /* Darker shade on hover */
+}
+.whatsapp-float {
+  position: fixed; /* Mantém o ícone fixo na tela */
+  bottom: 20px; /* Distância do fundo da tela */
+  right: 20px; /* Distância da direita da tela */
+  background-color: #25D366; /* Cor de fundo do ícone (verde do WhatsApp) */
+  color: white; /* Cor do ícone */
+  border-radius: 50%; /* Faz o ícone redondo */
+  padding: 15px; /* Espaçamento interno */
+  font-size: 30px; /* Tamanho do ícone */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar destaque */
+  transition: background-color 0.3s; /* Efeito de transição ao passar o mouse */
+}
+
+.whatsapp-float:hover {
+  background-color: #128C7E; /* Cor mais escura ao passar o mouse */
+}
+
+@media (max-width: 768px) {
+  .contact-form {
+    width: 90%; /* Responsive width */
+  }
+
+  .contact h2 {
+    font-size: 1.5em; /* Smaller font size for smaller screens */
+  }
+}
+
+
+
+/* Responsividade para telas maiores */
+@media (min-width: 768px) {
+  .services-container {
+    grid-template-columns: 1fr 1fr; /* Duas colunas em telas médias */
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-container {
+    grid-template-columns: 1fr 1fr 1fr; /* Três colunas em telas maiores */
+  }
+}
+
+
+
+::-webkit-scrollbar{
+  width: 10px;
+  border-radius: 15px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: blue;
+}
+
+
+/* Responsividade para smartphones */
+@media (max-width: 480px) {
+  .header {
+    padding: 2rem 5%;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  nav.navbar {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    flex-direction: column;
+    background-color: var(--second-bg-color);
+    width: 100%;
+    text-align: center;
+    transition: 0.5s;
+  }
+
+  nav.navbar.active {
+    left: 0;
+  }
+
+  nav.navbar a {
+    padding: 2rem;
+    border-bottom: 1px solid #333;
+    width: 100%;
+  }
+
+  .gradient-btn {
+    display: none;
+  }
+
+  .home {
+    flex-direction: column;
+    gap: 3rem;
+    padding-top: 8rem;
+  }
+
+  .home-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .home-content h1 {
+    font-size: 3.5rem;
+  }
+
+  .home-content h3 {
+    font-size: 2.5rem;
+  }
+
+  .home-img img {
+    width: 60vw;
+  }
+}
+/* Custom scrollbar */
+body {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: blue black; /* For Firefox */
+}
+
+/* For Webkit browsers (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: black; /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: blue; /* Color of the scrollbar */
+  border-radius: 10px; /* Make the scrollbar rounded */
+  border: 3px solid black; /* Optional: add a border for better contrast */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: darkblue; /* Darker blue on hover */
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    gap: 5rem;
+    text-align: center;
+  }
+
+  .home-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .home-content h1 {
+    font-size: 4rem;
+  }
+
+  .home-content h3 {
+    font-size: 3rem;
+  }
+
+  .home-img img {
+    width: 50vw;
+  }
+}
